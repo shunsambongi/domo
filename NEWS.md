@@ -1,22 +1,27 @@
-# domo (development version)
+# domo 0.3.0
 
-* `dbWriteTable` now updates the dataset schema when `overwrite = TRUE` and the
-  schema of the `value` argument does not match the schema of the dataset.
-* `dbCreateTable` can now accept a named list of fields for the `fields`
-  parameter.
-* New `pkgdown` website.
-* New `dbGetInfo` methods for `DomoDriver`, `DomoConnection`, and `DomoResult` 
-  classes.
+## New features
+
+* New `dbAppendTable` method for `DomoConnection` class.
 * New `dbGetRowsAffected` method for `DomoResult` class. This method always 
   returns 0, since it is not possible to execute SQL.
-* New `dbAppendTable` method for `DomoConnection` class.
-* Parameterized queries now possible using `dbSendQuery`, `dbBind`, and
-  `dbFetch`.
 * New `dbColumnInfo`, `dbGetStatement`, and `dbIsValid` methods for 
   `DomoResult`.
+* New `dbGetInfo` methods for `DomoDriver`, `DomoConnection`, and `DomoResult` 
+  classes.
+* Parameterized queries now possible using `dbSendQuery`, `dbBind`, and
+  `dbFetch`.
+* `dbWriteTable` now updates the dataset schema when `overwrite = TRUE` and the
+  schema of the `value` argument does not match the schema of the dataset.
 * New `DomoTblConnection` class to simplify dbplyr code.
 * New `sql_translate_env` method for `DomoTblConnection`.
 * New `paste` and `paste0` translations for `DomoTblConnection` class.
+* New `pkgdown` website.
+
+## Minor improvements and fixes
+
+* `dbCreateTable` now accepts a named list of fields for the `fields`
+  parameter.
 
 # domo 0.2.0
 
